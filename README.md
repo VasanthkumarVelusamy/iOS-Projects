@@ -1,2 +1,2 @@
 # iOS
-iOS public projects
+iOS projects
