@@ -16,11 +16,11 @@ class Goal {
     var caption: String
     var targetAmount: Int
     var currentSavings: Int
-    var startDate: Date
-    var targetDate: Date
-    var projectedDate: Date
+    var startDate: String
+    var targetDate: String
+    var projectedDate: String
   
-    init(goalName: String, goalType: String, imageName: String?, caption: String, targetAmount: Int, currentSavings: Int, startDate: Date, targetDate: Date, projectedDate: Date) {
+    init(goalName: String, goalType: String, imageName: String?, caption: String, targetAmount: Int, currentSavings: Int, startDate: String, targetDate: String, projectedDate: String) {
         self.goalName = goalName
         self.goalType = goalType
         self.caption = caption

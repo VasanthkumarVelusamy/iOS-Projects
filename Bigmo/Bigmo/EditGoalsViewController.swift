@@ -22,49 +22,59 @@ class EditGoalsViewController: UIViewController {
         super.viewDidLoad()
         
         if let type = goal?.goalType {
-            savingsType.placeholder = String(describing: type)
+            savingsType.text = String(describing: type)
         }
         if let amount = goal?.targetAmount {
-            targetAmount.placeholder = String(describing: amount)
+            targetAmount.text = String(describing: amount)
         }
         if let date = goal?.targetDate {
-            targetDate.placeholder = String(describing: date)
+            print("date is : \(date)")
+            targetDate.text = String(describing: date)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func modifyButtonTapped(_ sender: UIBarButtonItem) {
         savingsType.isEnabled = true
         targetAmount.isEnabled = true
         targetDate.isEnabled = true
         if sender.title == "Save" {
-            if let type = savingsType.text {
-//                goal?.goalType.rawValue = type
+            if let type = savingsType?.text {
+                goal?.goalType = type
             }
-            if let amount = targetAmount.text {
-//                goal?.targetAmount = Int(amount)!
+            if let stringAmount = targetAmount?.text, let intAmount = Int(stringAmount) {
+                goal?.targetAmount = intAmount
             }
             if let date = targetDate.text {
-               
+                goal?.targetDate = date
             }
+            showAlert()
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Are you done?", message: "Have you completed modifying this goal?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes, take me to the previous screen", style: UIAlertActionStyle.default, handler: {
+            (_)in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: {
+        (_)in
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension EditGoalsViewController: UITextFieldDelegate {

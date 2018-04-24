@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		762A79E3208F636E00F3ECEC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762A79E2208F636E00F3ECEC /* SettingsViewController.swift */; };
 		76D138E1208EEF2800668988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D138E0208EEF2800668988 /* AppDelegate.swift */; };
 		76D138E3208EEF2800668988 /* SavingsDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D138E2208EEF2800668988 /* SavingsDashboardViewController.swift */; };
 		76D138E6208EEF2800668988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76D138E4208EEF2800668988 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		762A79E2208F636E00F3ECEC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		76D138DD208EEF2800668988 /* Bigmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bigmo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D138E0208EEF2800668988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76D138E2208EEF2800668988 /* SavingsDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsDashboardViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				76D138E0208EEF2800668988 /* AppDelegate.swift */,
 				76D138E4208EEF2800668988 /* Main.storyboard */,
+				762A79E2208F636E00F3ECEC /* SettingsViewController.swift */,
 				76D138F8208F1CF700668988 /* EditGoalsViewController.swift */,
 				76D138E2208EEF2800668988 /* SavingsDashboardViewController.swift */,
 				76D138F6208F09C600668988 /* GoalViewController.swift */,
@@ -150,6 +153,7 @@
 			files = (
 				76D138F5208EFCC100668988 /* GoalCell.swift in Sources */,
 				76D138F7208F09C600668988 /* GoalViewController.swift in Sources */,
+				762A79E3208F636E00F3ECEC /* SettingsViewController.swift in Sources */,
 				76D138E3208EEF2800668988 /* SavingsDashboardViewController.swift in Sources */,
 				76D138F3208EF29800668988 /* Goal.swift in Sources */,
 				76D138E1208EEF2800668988 /* AppDelegate.swift in Sources */,

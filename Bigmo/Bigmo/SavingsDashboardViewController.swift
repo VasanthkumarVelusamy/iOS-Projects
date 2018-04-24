@@ -18,16 +18,20 @@ class SavingsDashboardViewController: UIViewController {
         goals = createGoals()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     func createGoals() -> [Goal] {
+//
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "MM/yy"
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM/yy"
+        let mba = Goal(goalName: "SUSEI'S MBA", goalType: "Savings", imageName: "biology.png", caption: "Way to Go!", targetAmount: 3500, currentSavings: 1600, startDate: "01/17",targetDate: "12/18", projectedDate: "3/19")
         
-        let mba = Goal(goalName: "SUSEI'S MBA", goalType: "Savings", imageName: "biology.png", caption: "Way to Go!", targetAmount: 3500, currentSavings: 1600, startDate: formatter.date(from: "01/17")!,targetDate: formatter.date(from: "12/18")!, projectedDate: formatter.date(from: "3/19")!)
+        let audi = Goal(goalName: "AUDI A3", goalType: "Savings", imageName: "car_calculation.png", caption: "Awesome ! Keep saving", targetAmount: 12500, currentSavings: 4900, startDate: "01/17", targetDate: "06/19", projectedDate: "11/19")
         
-        let audi = Goal(goalName: "AUDI A3", goalType: "Savings", imageName: "car_calculation.png", caption: "Awesome ! Keep saving", targetAmount: 12500, currentSavings: 4900, startDate: formatter.date(from: "01/17")!, targetDate: formatter.date(from: "06/19")!, projectedDate: formatter.date(from: "11/19")!)
-        
-        let macy = Goal(goalName: "MACY & I", goalType: "Savings", imageName: "retirement_planning.png", caption: "Well Begun is half done. Keep at it !", targetAmount: 6000, currentSavings: 600, startDate: formatter.date(from: "12/17")!, targetDate: formatter.date(from: "12/19")!, projectedDate: formatter.date(from: "12/19")!)
+        let macy = Goal(goalName: "MACY & I", goalType: "Savings", imageName: "retirement_planning.png", caption: "Well Begun is half done. Keep at it !", targetAmount: 6000, currentSavings: 600, startDate: "12/17", targetDate: "12/19", projectedDate: "12/19")
         
         return [mba, audi, macy]
     }
